@@ -1,0 +1,2856 @@
+{
+    "data": {
+        "monitors": [
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3600858,
+                            48.2087975
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200994",
+                        "title": "Parlament",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 48
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "1",
+                        "towards": "Stefan-Fadinger-Platz",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:28:30.000+0100",
+                                        "timeReal": "2023-01-28T19:28:31.000+0100",
+                                        "countdown": 4
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:38:30.000+0100",
+                                        "timeReal": "2023-01-28T19:38:33.000+0100",
+                                        "countdown": 14
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:48:30.000+0100",
+                                        "timeReal": "2023-01-28T19:48:30.000+0100",
+                                        "countdown": 24
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:58:30.000+0100",
+                                        "timeReal": "2023-01-28T19:58:30.000+0100",
+                                        "countdown": 34
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:08:30.000+0100",
+                                        "timeReal": "2023-01-28T20:08:30.000+0100",
+                                        "countdown": 44
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:18:30.000+0100",
+                                        "timeReal": "2023-01-28T20:18:30.000+0100",
+                                        "countdown": 54
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:28:30.000+0100",
+                                        "timeReal": "2023-01-28T20:28:30.000+0100",
+                                        "countdown": 64
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 101
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3601294,
+                            48.2084247
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200994",
+                        "title": "Parlament",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 16
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "1",
+                        "towards": "Prater Hauptallee",
+                        "direction": "R",
+                        "platform": "2",
+                        "richtungsId": "2",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:29:30.000+0100",
+                                        "timeReal": "2023-01-28T19:31:27.000+0100",
+                                        "countdown": 7
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:39:30.000+0100",
+                                        "timeReal": "2023-01-28T19:40:46.000+0100",
+                                        "countdown": 16
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:49:30.000+0100",
+                                        "timeReal": "2023-01-28T19:49:30.000+0100",
+                                        "countdown": 25
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:59:30.000+0100",
+                                        "timeReal": "2023-01-28T19:59:30.000+0100",
+                                        "countdown": 35
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:09:30.000+0100",
+                                        "timeReal": "2023-01-28T20:09:30.000+0100",
+                                        "countdown": 45
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:19:30.000+0100",
+                                        "timeReal": "2023-01-28T20:19:30.000+0100",
+                                        "countdown": 55
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:29:30.000+0100",
+                                        "timeReal": "2023-01-28T20:29:30.000+0100",
+                                        "countdown": 65
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 101
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3607361,
+                            48.2104744
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200192",
+                        "title": "Rathausplatz, Burgtheater",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 17
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "1",
+                        "towards": "Prater Hauptallee",
+                        "direction": "R",
+                        "platform": "2",
+                        "richtungsId": "2",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:30:30.000+0100",
+                                        "timeReal": "2023-01-28T19:32:27.000+0100",
+                                        "countdown": 8
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:40:30.000+0100",
+                                        "timeReal": "2023-01-28T19:41:46.000+0100",
+                                        "countdown": 17
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:50:30.000+0100",
+                                        "timeReal": "2023-01-28T19:50:30.000+0100",
+                                        "countdown": 26
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:00:30.000+0100",
+                                        "timeReal": "2023-01-28T20:00:30.000+0100",
+                                        "countdown": 36
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:10:30.000+0100",
+                                        "timeReal": "2023-01-28T20:10:30.000+0100",
+                                        "countdown": 46
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:20:30.000+0100",
+                                        "timeReal": "2023-01-28T20:20:30.000+0100",
+                                        "countdown": 56
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:30:30.000+0100",
+                                        "timeReal": "2023-01-28T20:30:30.000+0100",
+                                        "countdown": 66
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 101
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3549258,
+                            48.2092200
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201072",
+                        "title": "Rathaus U",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 252
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "2",
+                        "towards": "Friedrich-Engels-Platz",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:31:00.000+0100",
+                                        "timeReal": "2023-01-28T19:29:50.000+0100",
+                                        "countdown": 5
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:41:00.000+0100",
+                                        "timeReal": "2023-01-28T19:41:04.000+0100",
+                                        "countdown": 16
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:51:00.000+0100",
+                                        "timeReal": "2023-01-28T19:51:00.000+0100",
+                                        "countdown": 26
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:01:00.000+0100",
+                                        "timeReal": "2023-01-28T20:01:00.000+0100",
+                                        "countdown": 36
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:11:00.000+0100",
+                                        "timeReal": "2023-01-28T20:11:00.000+0100",
+                                        "countdown": 46
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:21:00.000+0100",
+                                        "timeReal": "2023-01-28T20:21:00.000+0100",
+                                        "countdown": 56
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:31:00.000+0100",
+                                        "timeReal": "2023-01-28T20:31:00.000+0100",
+                                        "countdown": 66
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 102
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3601294,
+                            48.2084247
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200994",
+                        "title": "Parlament",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 16
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "2",
+                        "towards": "Dornbach",
+                        "direction": "R",
+                        "platform": "2",
+                        "richtungsId": "2",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:24:30.000+0100",
+                                        "timeReal": "2023-01-28T19:23:48.000+0100",
+                                        "countdown": 0
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:34:30.000+0100",
+                                        "timeReal": "2023-01-28T19:40:01.000+0100",
+                                        "countdown": 15
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:44:30.000+0100",
+                                        "timeReal": "2023-01-28T19:44:30.000+0100",
+                                        "countdown": 20
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:54:30.000+0100",
+                                        "timeReal": "2023-01-28T19:54:30.000+0100",
+                                        "countdown": 30
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:04:30.000+0100",
+                                        "timeReal": "2023-01-28T20:04:30.000+0100",
+                                        "countdown": 40
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:14:30.000+0100",
+                                        "timeReal": "2023-01-28T20:14:30.000+0100",
+                                        "countdown": 50
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:24:30.000+0100",
+                                        "timeReal": "2023-01-28T20:24:30.000+0100",
+                                        "countdown": 60
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 102
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3553788,
+                            48.2092605
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201072",
+                        "title": "Rathaus U",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 269
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "2",
+                        "towards": "Dornbach",
+                        "direction": "R",
+                        "platform": "2",
+                        "richtungsId": "2",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:26:30.000+0100",
+                                        "timeReal": "2023-01-28T19:25:48.000+0100",
+                                        "countdown": 1
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:36:30.000+0100",
+                                        "timeReal": "2023-01-28T19:42:05.000+0100",
+                                        "countdown": 17
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:46:30.000+0100",
+                                        "timeReal": "2023-01-28T19:46:31.000+0100",
+                                        "countdown": 22
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:56:30.000+0100",
+                                        "timeReal": "2023-01-28T19:56:30.000+0100",
+                                        "countdown": 32
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:06:30.000+0100",
+                                        "timeReal": "2023-01-28T20:06:30.000+0100",
+                                        "countdown": 42
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:16:30.000+0100",
+                                        "timeReal": "2023-01-28T20:16:30.000+0100",
+                                        "countdown": 52
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:26:30.000+0100",
+                                        "timeReal": "2023-01-28T20:26:30.000+0100",
+                                        "countdown": 62
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 102
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3620536,
+                            48.2142219
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201184",
+                        "title": "Schottentor U",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 1212
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "37",
+                        "towards": "Hohe Warte",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:30:00.000+0100",
+                                        "timeReal": "2023-01-28T19:32:08.000+0100",
+                                        "countdown": 7
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:42:00.000+0100",
+                                        "timeReal": "2023-01-28T19:42:00.000+0100",
+                                        "countdown": 17
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:54:00.000+0100",
+                                        "timeReal": "2023-01-28T19:54:00.000+0100",
+                                        "countdown": 29
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:06:00.000+0100",
+                                        "timeReal": "2023-01-28T20:06:00.000+0100",
+                                        "countdown": 41
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:18:00.000+0100",
+                                        "timeReal": "2023-01-28T20:18:00.000+0100",
+                                        "countdown": 53
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:30:00.000+0100",
+                                        "timeReal": "2023-01-28T20:30:00.000+0100",
+                                        "countdown": 65
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 137
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3620536,
+                            48.2142219
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201184",
+                        "title": "Schottentor U",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 1212
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "38",
+                        "towards": "Grinzing",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:36:00.000+0100",
+                                        "timeReal": "2023-01-28T19:37:35.000+0100",
+                                        "countdown": 13
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:48:00.000+0100",
+                                        "timeReal": "2023-01-28T19:48:00.000+0100",
+                                        "countdown": 23
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:00:00.000+0100",
+                                        "timeReal": "2023-01-28T20:00:00.000+0100",
+                                        "countdown": 35
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:12:00.000+0100",
+                                        "timeReal": "2023-01-28T20:12:00.000+0100",
+                                        "countdown": 47
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:24:00.000+0100",
+                                        "timeReal": "2023-01-28T20:24:00.000+0100",
+                                        "countdown": 59
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 138
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3620536,
+                            48.2142219
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201184",
+                        "title": "Schottentor U",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 1212
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "40",
+                        "towards": "Gersthof, Herbeckstraße",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:34:00.000+0100",
+                                        "timeReal": "2023-01-28T19:34:45.000+0100",
+                                        "countdown": 10
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:46:00.000+0100",
+                                        "timeReal": "2023-01-28T19:46:00.000+0100",
+                                        "countdown": 21
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:58:00.000+0100",
+                                        "timeReal": "2023-01-28T19:58:00.000+0100",
+                                        "countdown": 33
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:10:00.000+0100",
+                                        "timeReal": "2023-01-28T20:10:00.000+0100",
+                                        "countdown": 45
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:23:00.000+0100",
+                                        "timeReal": "2023-01-28T20:23:00.000+0100",
+                                        "countdown": 58
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 140
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3645377,
+                            48.2153416
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201184",
+                        "title": "Schottentor U",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 1303
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "40A",
+                        "towards": "Döblinger Friedhof, Felix-Dahn-Straße",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:31:30.000+0100",
+                                        "timeReal": "2023-01-28T19:31:30.000+0100",
+                                        "countdown": 7
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:41:30.000+0100",
+                                        "timeReal": "2023-01-28T19:41:30.000+0100",
+                                        "countdown": 17
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:51:30.000+0100",
+                                        "timeReal": "2023-01-28T19:51:30.000+0100",
+                                        "countdown": 27
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:01:30.000+0100",
+                                        "timeReal": "2023-01-28T20:01:30.000+0100",
+                                        "countdown": 37
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:11:30.000+0100",
+                                        "timeReal": "2023-01-28T20:11:30.000+0100",
+                                        "countdown": 47
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:21:30.000+0100",
+                                        "timeReal": "2023-01-28T20:21:30.000+0100",
+                                        "countdown": 57
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:32:30.000+0100",
+                                        "timeReal": "2023-01-28T20:32:30.000+0100",
+                                        "countdown": 68
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptBusCity",
+                        "lineId": 440
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3620536,
+                            48.2142219
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201184",
+                        "title": "Schottentor U",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 1212
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "41",
+                        "towards": "Pötzleinsdorf",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:28:00.000+0100",
+                                        "timeReal": "2023-01-28T19:28:00.000+0100",
+                                        "countdown": 3
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:40:00.000+0100",
+                                        "timeReal": "2023-01-28T19:40:00.000+0100",
+                                        "countdown": 15
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:52:00.000+0100",
+                                        "timeReal": "2023-01-28T19:52:00.000+0100",
+                                        "countdown": 27
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:04:00.000+0100",
+                                        "timeReal": "2023-01-28T20:04:00.000+0100",
+                                        "countdown": 39
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:16:00.000+0100",
+                                        "timeReal": "2023-01-28T20:16:00.000+0100",
+                                        "countdown": 51
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:30:00.000+0100",
+                                        "timeReal": "2023-01-28T20:30:00.000+0100",
+                                        "countdown": 65
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 141
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3620536,
+                            48.2142219
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201184",
+                        "title": "Schottentor U",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 1212
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "42",
+                        "towards": "Antonigasse",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:25:00.000+0100",
+                                        "timeReal": "2023-01-28T19:25:23.000+0100",
+                                        "countdown": 1
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:37:00.000+0100",
+                                        "timeReal": "2023-01-28T19:37:02.000+0100",
+                                        "countdown": 12
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:49:00.000+0100",
+                                        "timeReal": "2023-01-28T19:49:00.000+0100",
+                                        "countdown": 24
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:01:00.000+0100",
+                                        "timeReal": "2023-01-28T20:01:00.000+0100",
+                                        "countdown": 36
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:13:00.000+0100",
+                                        "timeReal": "2023-01-28T20:13:00.000+0100",
+                                        "countdown": 48
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:26:00.000+0100",
+                                        "timeReal": "2023-01-28T20:26:00.000+0100",
+                                        "countdown": 61
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 142
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3566486,
+                            48.2145683
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200742",
+                        "title": "Landesgerichtsstraße",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 1346
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "43",
+                        "towards": "Neuwaldegg",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:25:30.000+0100",
+                                        "timeReal": "2023-01-28T19:26:59.000+0100",
+                                        "countdown": 2
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:33:00.000+0100",
+                                        "timeReal": "2023-01-28T19:33:00.000+0100",
+                                        "countdown": 8
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:40:30.000+0100",
+                                        "timeReal": "2023-01-28T19:41:25.000+0100",
+                                        "countdown": 17
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:55:30.000+0100",
+                                        "timeReal": "2023-01-28T19:55:30.000+0100",
+                                        "countdown": 31
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:03:00.000+0100",
+                                        "timeReal": "2023-01-28T20:03:00.000+0100",
+                                        "countdown": 38
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:10:30.000+0100",
+                                        "timeReal": "2023-01-28T20:10:30.000+0100",
+                                        "countdown": 46
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:18:00.000+0100",
+                                        "timeReal": "2023-01-28T20:18:00.000+0100",
+                                        "countdown": 53
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:25:30.000+0100",
+                                        "timeReal": "2023-01-28T20:25:30.000+0100",
+                                        "countdown": 61
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:33:00.000+0100",
+                                        "timeReal": "2023-01-28T20:33:00.000+0100",
+                                        "countdown": 68
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 143
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3566486,
+                            48.2145683
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200742",
+                        "title": "Landesgerichtsstraße",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 1346
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "44",
+                        "towards": "Ottakring, Maroltingergasse",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:33:00.000+0100",
+                                        "timeReal": "2023-01-28T19:33:00.000+0100",
+                                        "countdown": 8
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:45:00.000+0100",
+                                        "timeReal": "2023-01-28T19:45:00.000+0100",
+                                        "countdown": 20
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:57:00.000+0100",
+                                        "timeReal": "2023-01-28T19:57:00.000+0100",
+                                        "countdown": 32
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:09:00.000+0100",
+                                        "timeReal": "2023-01-28T20:09:00.000+0100",
+                                        "countdown": 44
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:21:00.000+0100",
+                                        "timeReal": "2023-01-28T20:21:00.000+0100",
+                                        "countdown": 56
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:33:00.000+0100",
+                                        "timeReal": "2023-01-28T20:33:00.000+0100",
+                                        "countdown": 68
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 144
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3560050,
+                            48.2069416
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200777",
+                        "title": "Auerspergstraße",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 1376
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "46",
+                        "towards": "Joachimsthalerplatz",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:32:30.000+0100",
+                                        "timeReal": "2023-01-28T19:32:30.000+0100",
+                                        "countdown": 8
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:42:30.000+0100",
+                                        "timeReal": "2023-01-28T19:42:30.000+0100",
+                                        "countdown": 18
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:52:30.000+0100",
+                                        "timeReal": "2023-01-28T19:52:30.000+0100",
+                                        "countdown": 28
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:02:30.000+0100",
+                                        "timeReal": "2023-01-28T20:02:30.000+0100",
+                                        "countdown": 38
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:12:30.000+0100",
+                                        "timeReal": "2023-01-28T20:12:30.000+0100",
+                                        "countdown": 48
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:22:30.000+0100",
+                                        "timeReal": "2023-01-28T20:22:30.000+0100",
+                                        "countdown": 58
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:32:30.000+0100",
+                                        "timeReal": "2023-01-28T20:32:30.000+0100",
+                                        "countdown": 68
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 146
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3567486,
+                            48.2056280
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201430",
+                        "title": "Volkstheater U",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 1401
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "48A",
+                        "towards": "Baumgartner Höhe",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:26:00.000+0100",
+                                        "timeReal": "2023-01-28T19:26:42.000+0100",
+                                        "countdown": 2
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:36:00.000+0100",
+                                        "timeReal": "2023-01-28T19:37:32.000+0100",
+                                        "countdown": 13
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:46:00.000+0100",
+                                        "timeReal": "2023-01-28T19:46:07.000+0100",
+                                        "countdown": 21
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:56:00.000+0100",
+                                        "timeReal": "2023-01-28T19:56:00.000+0100",
+                                        "countdown": 31
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:06:00.000+0100",
+                                        "timeReal": "2023-01-28T20:06:00.000+0100",
+                                        "countdown": 41
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:16:00.000+0100",
+                                        "timeReal": "2023-01-28T20:16:00.000+0100",
+                                        "countdown": 51
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:26:00.000+0100",
+                                        "timeReal": "2023-01-28T20:26:00.000+0100",
+                                        "countdown": 61
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptBusCity",
+                        "lineId": 448
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3569441,
+                            48.2046966
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201430",
+                        "title": "Volkstheater U",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 1440
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "49",
+                        "towards": "Hütteldorf",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:25:00.000+0100",
+                                        "timeReal": "2023-01-28T19:24:03.000+0100",
+                                        "countdown": 0
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:32:30.000+0100",
+                                        "timeReal": "2023-01-28T19:32:30.000+0100",
+                                        "countdown": 8
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:40:00.000+0100",
+                                        "timeReal": "2023-01-28T19:40:00.000+0100",
+                                        "countdown": 15
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:47:30.000+0100",
+                                        "timeReal": "2023-01-28T19:48:36.000+0100",
+                                        "countdown": 24
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:55:00.000+0100",
+                                        "timeReal": "2023-01-28T19:55:05.000+0100",
+                                        "countdown": 30
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:02:30.000+0100",
+                                        "timeReal": "2023-01-28T20:02:30.000+0100",
+                                        "countdown": 38
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:12:30.000+0100",
+                                        "timeReal": "2023-01-28T20:12:30.000+0100",
+                                        "countdown": 48
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:23:30.000+0100",
+                                        "timeReal": "2023-01-28T20:23:30.000+0100",
+                                        "countdown": 59
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 149
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3600858,
+                            48.2087975
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200994",
+                        "title": "Parlament",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 48
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "71",
+                        "towards": "Kaiserebersdorf",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:25:00.000+0100",
+                                        "timeReal": "2023-01-28T19:24:00.000+0100",
+                                        "countdown": 0
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:37:00.000+0100",
+                                        "timeReal": "2023-01-28T19:37:00.000+0100",
+                                        "countdown": 12
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:49:00.000+0100",
+                                        "timeReal": "2023-01-28T19:49:00.000+0100",
+                                        "countdown": 24
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:01:00.000+0100",
+                                        "timeReal": "2023-01-28T20:01:00.000+0100",
+                                        "countdown": 36
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:13:00.000+0100",
+                                        "timeReal": "2023-01-28T20:13:00.000+0100",
+                                        "countdown": 48
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:25:00.000+0100",
+                                        "timeReal": "2023-01-28T20:25:00.000+0100",
+                                        "countdown": 60
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 171
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3601294,
+                            48.2084247
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200994",
+                        "title": "Parlament",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 16
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "71",
+                        "towards": "Börse",
+                        "direction": "R",
+                        "platform": "2",
+                        "richtungsId": "2",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:26:30.000+0100",
+                                        "timeReal": "2023-01-28T19:28:29.000+0100",
+                                        "countdown": 4
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:38:30.000+0100",
+                                        "timeReal": "2023-01-28T19:38:40.000+0100",
+                                        "countdown": 14
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:50:30.000+0100",
+                                        "timeReal": "2023-01-28T19:49:31.000+0100",
+                                        "countdown": 25
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:02:30.000+0100",
+                                        "timeReal": "2023-01-28T20:01:03.000+0100",
+                                        "countdown": 36
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:14:30.000+0100",
+                                        "timeReal": "2023-01-28T20:14:30.000+0100",
+                                        "countdown": 50
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:26:30.000+0100",
+                                        "timeReal": "2023-01-28T20:26:30.000+0100",
+                                        "countdown": 62
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 171
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3607361,
+                            48.2104744
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200192",
+                        "title": "Rathausplatz, Burgtheater",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 17
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "71",
+                        "towards": "Börse",
+                        "direction": "R",
+                        "platform": "2",
+                        "richtungsId": "2",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:27:30.000+0100",
+                                        "timeReal": "2023-01-28T19:29:29.000+0100",
+                                        "countdown": 5
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:39:30.000+0100",
+                                        "timeReal": "2023-01-28T19:39:40.000+0100",
+                                        "countdown": 15
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:51:30.000+0100",
+                                        "timeReal": "2023-01-28T19:50:31.000+0100",
+                                        "countdown": 26
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:03:30.000+0100",
+                                        "timeReal": "2023-01-28T20:02:03.000+0100",
+                                        "countdown": 37
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:15:30.000+0100",
+                                        "timeReal": "2023-01-28T20:15:30.000+0100",
+                                        "countdown": 51
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:27:30.000+0100",
+                                        "timeReal": "2023-01-28T20:27:30.000+0100",
+                                        "countdown": 63
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 171
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3601294,
+                            48.2084247
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200994",
+                        "title": "Parlament",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 16
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "D",
+                        "towards": "Nußdorf",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:33:00.000+0100",
+                                        "timeReal": "2023-01-28T19:34:01.000+0100",
+                                        "countdown": 9
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:43:00.000+0100",
+                                        "timeReal": "2023-01-28T19:42:35.000+0100",
+                                        "countdown": 18
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:53:00.000+0100",
+                                        "timeReal": "2023-01-28T19:53:00.000+0100",
+                                        "countdown": 28
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:03:00.000+0100",
+                                        "timeReal": "2023-01-28T20:03:00.000+0100",
+                                        "countdown": 38
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:13:00.000+0100",
+                                        "timeReal": "2023-01-28T20:13:00.000+0100",
+                                        "countdown": 48
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:23:00.000+0100",
+                                        "timeReal": "2023-01-28T20:23:00.000+0100",
+                                        "countdown": 58
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:33:00.000+0100",
+                                        "timeReal": "2023-01-28T20:33:00.000+0100",
+                                        "countdown": 68
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 136
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3607361,
+                            48.2104744
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200192",
+                        "title": "Rathausplatz, Burgtheater",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 17
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "D",
+                        "towards": "Nußdorf",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:34:00.000+0100",
+                                        "timeReal": "2023-01-28T19:35:01.000+0100",
+                                        "countdown": 10
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:44:00.000+0100",
+                                        "timeReal": "2023-01-28T19:43:35.000+0100",
+                                        "countdown": 19
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:54:00.000+0100",
+                                        "timeReal": "2023-01-28T19:54:00.000+0100",
+                                        "countdown": 29
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:04:00.000+0100",
+                                        "timeReal": "2023-01-28T20:04:00.000+0100",
+                                        "countdown": 39
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:14:00.000+0100",
+                                        "timeReal": "2023-01-28T20:14:00.000+0100",
+                                        "countdown": 49
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:24:00.000+0100",
+                                        "timeReal": "2023-01-28T20:24:00.000+0100",
+                                        "countdown": 59
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:34:00.000+0100",
+                                        "timeReal": "2023-01-28T20:34:00.000+0100",
+                                        "countdown": 69
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 136
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3600858,
+                            48.2087975
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200994",
+                        "title": "Parlament",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 48
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "D",
+                        "towards": "Absberggasse",
+                        "direction": "R",
+                        "platform": "2",
+                        "richtungsId": "2",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:31:30.000+0100",
+                                        "timeReal": "2023-01-28T19:32:04.000+0100",
+                                        "countdown": 7
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:41:30.000+0100",
+                                        "timeReal": "2023-01-28T19:45:06.000+0100",
+                                        "countdown": 20
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:51:30.000+0100",
+                                        "timeReal": "2023-01-28T19:51:30.000+0100",
+                                        "countdown": 27
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:01:30.000+0100",
+                                        "timeReal": "2023-01-28T20:01:30.000+0100",
+                                        "countdown": 37
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:11:30.000+0100",
+                                        "timeReal": "2023-01-28T20:11:30.000+0100",
+                                        "countdown": 47
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:21:30.000+0100",
+                                        "timeReal": "2023-01-28T20:21:30.000+0100",
+                                        "countdown": 57
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:31:30.000+0100",
+                                        "timeReal": "2023-01-28T20:31:30.000+0100",
+                                        "countdown": 67
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 136
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3600858,
+                            48.2087975
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200994",
+                        "title": "Parlament",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 48
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "U2Z",
+                        "towards": "Oper, Karlsplatz U",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:25:00.000+0100",
+                                        "timeReal": "2023-01-28T19:24:00.000+0100",
+                                        "countdown": 0
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:37:00.000+0100",
+                                        "timeReal": "2023-01-28T19:37:00.000+0100",
+                                        "countdown": 12
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:49:00.000+0100",
+                                        "timeReal": "2023-01-28T19:49:00.000+0100",
+                                        "countdown": 24
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:01:00.000+0100",
+                                        "timeReal": "2023-01-28T20:01:00.000+0100",
+                                        "countdown": 36
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:13:00.000+0100",
+                                        "timeReal": "2023-01-28T20:13:00.000+0100",
+                                        "countdown": 48
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:25:00.000+0100",
+                                        "timeReal": "2023-01-28T20:25:00.000+0100",
+                                        "countdown": 60
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 150
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3601294,
+                            48.2084247
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200994",
+                        "title": "Parlament",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 16
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "U2Z",
+                        "towards": "Schottenring U",
+                        "direction": "R",
+                        "platform": "2",
+                        "richtungsId": "2",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:29:30.000+0100",
+                                        "timeReal": "2023-01-28T19:30:00.000+0100",
+                                        "countdown": 5
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:41:30.000+0100",
+                                        "timeReal": "2023-01-28T19:41:30.000+0100",
+                                        "countdown": 17
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:53:30.000+0100",
+                                        "timeReal": "2023-01-28T19:53:30.000+0100",
+                                        "countdown": 29
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:05:30.000+0100",
+                                        "timeReal": "2023-01-28T20:05:30.000+0100",
+                                        "countdown": 41
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:17:30.000+0100",
+                                        "timeReal": "2023-01-28T20:17:30.000+0100",
+                                        "countdown": 53
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:29:30.000+0100",
+                                        "timeReal": "2023-01-28T20:29:30.000+0100",
+                                        "countdown": 65
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 150
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3607361,
+                            48.2104744
+                        ]
+                    },
+                    "properties": {
+                        "name": "60200192",
+                        "title": "Rathausplatz, Burgtheater",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "attributes": {
+                            "rbl": 17
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "U2Z",
+                        "towards": "Schottenring U",
+                        "direction": "R",
+                        "platform": "2",
+                        "richtungsId": "2",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:30:30.000+0100",
+                                        "timeReal": "2023-01-28T19:31:00.000+0100",
+                                        "countdown": 6
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:42:30.000+0100",
+                                        "timeReal": "2023-01-28T19:42:30.000+0100",
+                                        "countdown": 18
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:54:30.000+0100",
+                                        "timeReal": "2023-01-28T19:54:30.000+0100",
+                                        "countdown": 30
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:06:30.000+0100",
+                                        "timeReal": "2023-01-28T20:06:30.000+0100",
+                                        "countdown": 42
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:18:30.000+0100",
+                                        "timeReal": "2023-01-28T20:18:30.000+0100",
+                                        "countdown": 54
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:30:30.000+0100",
+                                        "timeReal": "2023-01-28T20:30:30.000+0100",
+                                        "countdown": 66
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptTram",
+                        "lineId": 150
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3591661,
+                            48.2055830
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201430",
+                        "title": "Volkstheater",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "gate": "1",
+                        "attributes": {
+                            "rbl": 4909
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "U3",
+                        "towards": "SIMMERING",
+                        "direction": "H",
+                        "platform": "1",
+                        "richtungsId": "1",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:28:36.000+0100",
+                                        "timeReal": "2023-01-28T19:28:36.000+0100",
+                                        "countdown": 5
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:32:36.000+0100",
+                                        "timeReal": "2023-01-28T19:32:36.000+0100",
+                                        "countdown": 9
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "SIMMERING    ",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "foldingRamp": true,
+                                        "foldingRampType": "part",
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:37:30.000+0100",
+                                        "countdown": 13
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Simmering",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:42:30.000+0100",
+                                        "countdown": 18
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Simmering",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:47:30.000+0100",
+                                        "countdown": 23
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Simmering",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:52:30.000+0100",
+                                        "countdown": 28
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Simmering",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:57:30.000+0100",
+                                        "countdown": 33
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Simmering",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:02:30.000+0100",
+                                        "countdown": 38
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Simmering",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:07:30.000+0100",
+                                        "countdown": 43
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Simmering",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:12:30.000+0100",
+                                        "countdown": 48
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Simmering",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:17:30.000+0100",
+                                        "countdown": 53
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Simmering",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:23:00.000+0100",
+                                        "countdown": 58
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Simmering",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:30:30.000+0100",
+                                        "countdown": 66
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Simmering",
+                                        "direction": "H",
+                                        "richtungsId": "1",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptMetro",
+                        "lineId": 303
+                    }
+                ],
+                "attributes": {}
+            },
+            {
+                "locationStop": {
+                    "type": "Feature",
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [
+                            16.3590850,
+                            48.2056311
+                        ]
+                    },
+                    "properties": {
+                        "name": "60201430",
+                        "title": "Volkstheater",
+                        "municipality": "Wien",
+                        "municipalityId": 90001,
+                        "type": "stop",
+                        "coordName": "WGS84",
+                        "gate": "2",
+                        "attributes": {
+                            "rbl": 4908
+                        }
+                    }
+                },
+                "lines": [
+                    {
+                        "name": "U3",
+                        "towards": "OTTAKRING",
+                        "direction": "R",
+                        "platform": "2",
+                        "richtungsId": "2",
+                        "barrierFree": true,
+                        "realtimeSupported": true,
+                        "trafficjam": false,
+                        "departures": {
+                            "departure": [
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:25:36.000+0100",
+                                        "timeReal": "2023-01-28T19:25:36.000+0100",
+                                        "countdown": 2
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:31:36.000+0100",
+                                        "timeReal": "2023-01-28T19:31:36.000+0100",
+                                        "countdown": 8
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "OTTAKRING    ",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "foldingRamp": true,
+                                        "foldingRampType": "part",
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:34:30.000+0100",
+                                        "countdown": 10
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:39:30.000+0100",
+                                        "countdown": 15
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:44:30.000+0100",
+                                        "countdown": 20
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:49:30.000+0100",
+                                        "countdown": 25
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:54:30.000+0100",
+                                        "countdown": 30
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T19:59:30.000+0100",
+                                        "countdown": 35
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:04:30.000+0100",
+                                        "countdown": 40
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:09:30.000+0100",
+                                        "countdown": 45
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:14:30.000+0100",
+                                        "countdown": 50
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:19:30.000+0100",
+                                        "countdown": 55
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:24:30.000+0100",
+                                        "countdown": 60
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                },
+                                {
+                                    "departureTime": {
+                                        "timePlanned": "2023-01-28T20:29:30.000+0100",
+                                        "countdown": 65
+                                    },
+                                    "vehicle": {
+                                        "name": "U3",
+                                        "towards": "Ottakring",
+                                        "direction": "R",
+                                        "richtungsId": "2",
+                                        "barrierFree": true,
+                                        "realtimeSupported": true,
+                                        "trafficjam": false,
+                                        "type": "ptMetro",
+                                        "attributes": {},
+                                        "linienId": 303
+                                    }
+                                }
+                            ]
+                        },
+                        "type": "ptMetro",
+                        "lineId": 303
+                    }
+                ],
+                "attributes": {}
+            }
+        ]
+    },
+    "message": {
+        "value": "OK",
+        "messageCode": 1,
+        "serverTime": "2023-01-28T19:24:18.000+0100"
+    }
+}
