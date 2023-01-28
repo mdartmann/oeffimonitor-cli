@@ -1,6 +1,5 @@
 use serde_json::to_string_pretty;
 use serde_json::Value;
-use std::fmt;
 
 const STATION_IDS: [i32; 18] = [
     252,  // Rathaus – 2 (Richtung Friedrich-Engels-Platz)
@@ -43,6 +42,7 @@ impl WienerLinienAPIRequest {
     }
 }
 
+#[allow(non_snake_case)]
 struct WienerLinienMonitor {
     locationStop: WienerLinienLocationStop,
     lines: Vec<WienerLinienLine>,
@@ -59,6 +59,7 @@ struct WienerLinienLine {
     departures: Vec<WienerLinienLineDeparture>,
 }
 
+#[allow(non_snake_case)]
 struct WienerLinienLineDeparture {
     timePlanned: iso8601::DateTime,
     timeReal: iso8601::DateTime,
@@ -69,18 +70,14 @@ impl WienerLinienLocationStop {
     /// - Assemble WienerLinienLocationStop object from JSON API output
     /// - Expects an index from the monitors array
     fn assemble_from_json(input: &serde_json::Value) -> Self {
-        let locationStopValue = input["locationStop"].clone();
-        let name = locationStopValue["properties"]["title"].as_str().unwrap();
-        let coordsValue = locationStopValue["geometry"]["coordinates"]
+        let location_stop_value = input["locationStop"].clone();
+        let coords_value = location_stop_value["geometry"]["coordinates"]
             .as_array()
             .unwrap();
-        let coordX = coordsValue[0].as_f64().unwrap();
-        let coordY = coordsValue[1].as_f64().unwrap();
-        let ret = Self {
-            coordinates: [coordX, coordY],
-            title: name.to_string(),
-        };
-        ret
+        Self {
+            coordinates: [coords_value[0].as_f64().unwrap(), coords_value[1].as_f64().unwrap()],
+            title: location_stop_value["properties"]["title"].as_str().unwrap().to_string(),
+        }
     }
 }
 
@@ -89,13 +86,12 @@ impl WienerLinienLineDeparture {
     /// - Expects Index from `lines.departures.departure` array
     fn assemble_from_json(input: &serde_json::Value) -> Self {
         let departure_value = input["departureTime"].clone();
-        let ret = Self {
+        Self {
             timePlanned: iso8601::datetime(departure_value["timePlanned"].as_str().unwrap())
                 .unwrap(),
             timeReal: iso8601::datetime(departure_value["timeReal"].as_str().unwrap()).unwrap(),
             countdown: departure_value["countdown"].as_i64().unwrap(),
-        };
-        ret
+        }
     }
 }
 
@@ -111,17 +107,11 @@ impl WienerLinienLine {
             departure_parsed_array.push(WienerLinienLineDeparture::assemble_from_json(&x));
         });
 
-        return Self {
+        Self {
             name: t_name.to_string(),
             vehicle_type: t_vtype.to_string(),
             departures: departure_parsed_array,
-        };
-    }
-}
-
-impl fmt::Display for WienerLinienLineDeparture {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "")
+        }
     }
 }
 
