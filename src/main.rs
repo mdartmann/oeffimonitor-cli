@@ -1,6 +1,5 @@
-use iso8601::Date;
 use serde_json::Value;
-use std::{error::Error, vec};
+use std::vec;
 
 const STATION_IDS: [i32; 18] = [
     252,  // Rathaus – 2 (Richtung Friedrich-Engels-Platz)
@@ -52,7 +51,7 @@ struct WienerLinienMonitor {
 
 #[derive(Debug, Clone)]
 struct WienerLinienLocationStop {
-    coordinates: [f64; 2],
+    _coordinates: [f64; 2],
     title: String,
 }
 
@@ -82,7 +81,7 @@ impl WienerLinienLocationStop {
             .as_array()
             .unwrap();
         Self {
-            coordinates: [
+            _coordinates: [
                 coords_value[0].as_f64().unwrap(),
                 coords_value[1].as_f64().unwrap(),
             ],
@@ -99,8 +98,8 @@ impl WienerLinienLineDeparture {
     /// - Expects Index from `lines.departures.departure` array
     fn assemble_from_json(input: &serde_json::Value) -> Self {
         let departure_value = input["departureTime"].clone();
-        let mut departure_time_real: iso8601::DateTime;
-        let mut departure_time_real_present: bool;
+        let departure_time_real: iso8601::DateTime;
+        let departure_time_real_present: bool;
         if departure_value["timeReal"].is_string() {
             departure_time_real =
                 iso8601::datetime(departure_value["timeReal"].as_str().unwrap()).unwrap();
@@ -143,6 +142,7 @@ impl WienerLinienLine {
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
+#[allow(non_camel_case_types)]
 enum WienerLinienVehicleType {
     ptTram,
     ptMetro,
