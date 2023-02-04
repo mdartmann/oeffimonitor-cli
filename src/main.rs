@@ -31,7 +31,7 @@ struct WienerLinienAPIRequest {
 impl WienerLinienAPIRequest {
     fn to_req_url(self) -> String {
         return format!(
-            "{}?activeTrafficInfo={}{}",
+            "{}?activateTrafficInfo={}{}",
             self.url,
             self.traffic_info,
             self.stop_id
@@ -70,6 +70,25 @@ struct WienerLinienLineDeparture {
     timeReal: iso8601::DateTime,
     timeRealIsPresent: bool,
     countdown: i64,
+}
+
+#[derive(Clone)]
+struct WienerLinienTrafficInfo {
+    priority: String,
+    title: String,
+    description: String
+}
+
+impl WienerLinienTrafficInfo {
+    /// - Assemble WienerLinienTrafficInfo object from JSON API output
+    /// - Expects an element from the "trafficInfos" array
+    fn assemble_from_json(input: &serde_json::Value) -> Self {
+        Self {
+            priority: input["priority"].as_str().unwrap().to_string(),
+            description: input["description"].as_str().unwrap().to_string(),
+            title: input["title"].as_str().unwrap().to_string()
+        }
+    }
 }
 
 impl WienerLinienLocationStop {
@@ -244,6 +263,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let response_json: Value =
         serde_json::from_str(&get_data_from_api(reqobj).await.expect("API REQ FAILED")).expect("JSON PARSING FAILED");
+    
+    let response_trafficinfo_json = response_json["data"]["trafficInfos"].as_array();
 
     let response_monitors_json = response_json["data"]["monitors"].as_array().unwrap();
 
@@ -285,10 +306,23 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             })
         })
     });
-
+    
+    let traffic_info_present = response_trafficinfo_json.is_some();
+    let mut traffic_info : Vec<WienerLinienTrafficInfo> = vec![]; 
+    
+    if traffic_info_present {
+        response_trafficinfo_json.unwrap().iter().for_each(|raw_trafficinfo| {
+            traffic_info.push(WienerLinienTrafficInfo::assemble_from_json(raw_trafficinfo));   
+        });
+    }
 //    departures.sort_by(|a, b| a.countdown.partial_cmp(&b.countdown).unwrap());
     departures.sort();
-
+    
+    if traffic_info_present {
+        traffic_info.iter().for_each(|info| {
+            println!("TRAFFIC INFO! TITLE: {} DESCRIPTION:{} PRIORITY:{}", info.title, info.description, info.priority);
+        })
+    }
     departures.iter().for_each(|dep| {
         println!(
             "Dep: in {} min  line {} type {:?} to {} from station {}",
