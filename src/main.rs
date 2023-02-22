@@ -1,5 +1,6 @@
 use serde_json::Value;
 use std::vec;
+use thiserror::Error;
 
 const STATION_IDS: [i32; 18] = [
     252,  // Rathaus – 2 (Richtung Friedrich-Engels-Platz)
@@ -22,6 +23,18 @@ const STATION_IDS: [i32; 18] = [
     5691, // Auerspergstraße – N46 (stadtauswärts)
 ];
 
+#[derive(Error, Debug)]
+enum ApiRequestError {
+    #[error("API request failed: {0}")]
+    ApiReqFailed(#[from] reqwest::Error),
+
+    #[error("JSON parsing failed: {0}")]
+    JsonParsingFailed(#[from] serde_json::Error),
+
+    #[error("Missing response field: {0}")]
+    MissingField(String),
+}
+
 struct WienerLinienAPIRequest {
     url: String,
     traffic_info: String,
@@ -29,7 +42,7 @@ struct WienerLinienAPIRequest {
 }
 
 impl WienerLinienAPIRequest {
-    fn to_req_url(self) -> String {
+    fn to_req_url(&self) -> String {
         return format!(
             "{}?activateTrafficInfo={}{}",
             self.url,
@@ -76,7 +89,7 @@ struct WienerLinienLineDeparture {
 struct WienerLinienTrafficInfo {
     priority: String,
     title: String,
-    description: String
+    description: String,
 }
 
 impl WienerLinienTrafficInfo {
@@ -86,7 +99,7 @@ impl WienerLinienTrafficInfo {
         Self {
             priority: input["priority"].as_str().unwrap().to_string(),
             description: input["description"].as_str().unwrap().to_string(),
-            title: input["title"].as_str().unwrap().to_string()
+            title: input["title"].as_str().unwrap().to_string(),
         }
     }
 }
@@ -169,13 +182,13 @@ enum WienerLinienVehicleType {
     ptNightBus,
 }
 
-#[derive(Clone,Eq)]
+#[derive(Clone, Eq)]
 struct Line {
     vehicle_type: WienerLinienVehicleType,
     name: String,
 }
 
-#[derive(Clone,Eq)]
+#[derive(Clone, Eq)]
 struct Departure {
     time: iso8601::DateTime,
     countdown: i64,
@@ -217,23 +230,23 @@ impl Departure {
 }
 
 impl Ord for Departure {
-    fn cmp(&self, other: &Self) -> std::cmp::Ordering{
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
         self.countdown.cmp(&other.countdown)
     }
 }
 
 impl PartialOrd for Departure {
     fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
-        Some(self.cmp(other)) 
+        Some(self.cmp(other))
     }
 }
 
 impl PartialEq for Departure {
     fn eq(&self, other: &Self) -> bool {
-        self.line == other.line && 
-        self.destination_name == other.destination_name &&
-        self.station_name == other.station_name &&
-        self.time == other.time
+        self.line == other.line
+            && self.destination_name == other.destination_name
+            && self.station_name == other.station_name
+            && self.time == other.time
     }
 }
 
@@ -243,7 +256,7 @@ impl PartialEq for Line {
     }
 }
 
-async fn get_data_from_api(req: WienerLinienAPIRequest) -> Result<String, reqwest::Error> {
+async fn get_data_from_api(req: &WienerLinienAPIRequest) -> Result<String, reqwest::Error> {
     let res = reqwest::get(req.to_req_url()).await;
 
     if res.is_err() {
@@ -253,35 +266,49 @@ async fn get_data_from_api(req: WienerLinienAPIRequest) -> Result<String, reqwes
     return Ok(res?.text().await?);
 }
 
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
+async fn make_api_request(
+) -> Result<(Vec<Departure>, Option<Vec<WienerLinienTrafficInfo>>), ApiRequestError> {
     let reqobj = WienerLinienAPIRequest {
         url: "http://www.wienerlinien.at/ogd_realtime/monitor/".to_string(),
         traffic_info: "stoerunglang".to_string(),
         stop_id: STATION_IDS.to_vec(),
     };
 
-    let response_json: Value =
-        serde_json::from_str(&get_data_from_api(reqobj).await.expect("API REQ FAILED")).expect("JSON PARSING FAILED");
-    
+    let response_text = match get_data_from_api(&reqobj).await {
+        Ok(text) => text,
+        Err(e) => return Err(ApiRequestError::ApiReqFailed(e)),
+    };
+
+    let response_json: Value = match serde_json::from_str(&response_text) {
+        Ok(json) => json,
+        Err(e) => return Err(ApiRequestError::JsonParsingFailed(e)),
+    };
+
     let response_trafficinfo_json = response_json["data"]["trafficInfos"].as_array();
 
-    let response_monitors_json = response_json["data"]["monitors"].as_array().unwrap();
+    let response_monitors_json = response_json["data"]["monitors"]
+        .as_array()
+        .ok_or(ApiRequestError::MissingField("monitors".to_string()))?;
 
     let mut wl_monitors: Vec<WienerLinienMonitor> = vec![];
-    response_monitors_json.iter().for_each(|monitor| {
+    response_monitors_json.iter().try_for_each(|monitor| {
         let station = WienerLinienLocationStop::assemble_from_json(monitor);
         let mut v_lines: Vec<WienerLinienLine> = vec![];
-        monitor["lines"]
-            .as_array()
-            .unwrap()
-            .iter()
-            .for_each(|line| v_lines.push(WienerLinienLine::assemble_from_json(line)));
-        wl_monitors.push(WienerLinienMonitor {
-            lines: v_lines,
-            locationStop: station,
-        });
-    });
+        if let Some(arr_lines) = monitor["lines"].as_array() {
+            arr_lines
+                .iter()
+                .for_each(|line| v_lines.push(WienerLinienLine::assemble_from_json(line)));
+            wl_monitors.push(WienerLinienMonitor {
+                lines: v_lines,
+                locationStop: station,
+            });
+            Ok(())
+        } else {
+            Err(ApiRequestError::MissingField(
+                "lines missing or of wrong type".to_string(),
+            ))
+        }
+    })?;
 
     let mut departures: Vec<Departure> = vec![];
     wl_monitors.iter().for_each(|monitor| {
@@ -306,33 +333,50 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             })
         })
     });
-    
-    let traffic_info_present = response_trafficinfo_json.is_some();
-    let mut traffic_info : Vec<WienerLinienTrafficInfo> = vec![]; 
-    
-    if traffic_info_present {
-        response_trafficinfo_json.unwrap().iter().for_each(|raw_trafficinfo| {
-            traffic_info.push(WienerLinienTrafficInfo::assemble_from_json(raw_trafficinfo));   
-        });
-    }
-//    departures.sort_by(|a, b| a.countdown.partial_cmp(&b.countdown).unwrap());
-    departures.sort();
-    
-    if traffic_info_present {
-        traffic_info.iter().for_each(|info| {
-            println!("TRAFFIC INFO! TITLE: {} DESCRIPTION:{} PRIORITY:{}", info.title, info.description, info.priority);
-        })
-    }
-    departures.iter().for_each(|dep| {
-        println!(
-            "Dep: in {} min  line {} type {:?} to {} from station {}",
-            dep.countdown,
-            dep.line.name,
-            dep.line.vehicle_type,
-            dep.destination_name,
-            dep.station_name
-        );
-    });
 
-    return Ok(());
+    let mut traffic_info: Option<Vec<WienerLinienTrafficInfo>> = None;
+    if let Some(response_trafficinfo) = response_trafficinfo_json {
+        traffic_info = Some(
+            response_trafficinfo
+            .iter()
+            .map(|raw_trafficinfo| WienerLinienTrafficInfo::assemble_from_json(raw_trafficinfo))
+            .collect() 
+        );
+    }
+    departures.sort();
+
+    Ok((departures, traffic_info))
+}
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    loop {
+        // clear
+        print!("\x1B[2J\x1B[1;1H");
+        let (departures, traffic_info) = make_api_request().await.unwrap();
+        if traffic_info.is_some() {
+            traffic_info.unwrap().iter().for_each(|info| {
+                println!(
+                    "TRAFFIC INFO! TITLE: {} DESCRIPTION:{} PRIORITY:{}",
+                    info.title, info.description, info.priority
+                );
+            })
+        }
+
+        let mut iter = departures.iter();
+        for _ in 0..5 {
+            let odep = iter.next();
+            if odep.is_some() {
+                let dep = odep.unwrap();
+                println!(
+                    "Dep: in {} min  line {} type {:?} to {} from station {}",
+                    dep.countdown,
+                    dep.line.name,
+                    dep.line.vehicle_type,
+                    dep.destination_name,
+                    dep.station_name
+                );
+            }
+        }
+    }
 }
