@@ -43,7 +43,7 @@ struct WienerLinienAPIRequest {
 
 impl WienerLinienAPIRequest {
     fn to_req_url(&self) -> String {
-        return format!(
+       format!(
             "{}?activateTrafficInfo={}{}",
             self.url,
             self.traffic_info,
@@ -51,7 +51,7 @@ impl WienerLinienAPIRequest {
                 .iter()
                 .map(|x| "&stopId=".to_string() + &x.to_string())
                 .collect::<String>()
-        );
+        )
     }
 }
 
@@ -137,7 +137,7 @@ impl WienerLinienLineDeparture {
                 iso8601::datetime(departure_value["timeReal"].as_str().unwrap()).unwrap();
             departure_time_real_present = true;
         } else {
-            departure_time_real = iso8601::datetime(&"2000-01-01T00:00".to_string()).unwrap();
+            departure_time_real = iso8601::datetime("2000-01-01T00:00").unwrap();
             departure_time_real_present = false;
         }
         Self {
@@ -160,7 +160,7 @@ impl WienerLinienLine {
         let departure_raw_array = input["departures"]["departure"].as_array().unwrap();
         let mut departure_parsed_array: Vec<WienerLinienLineDeparture> = vec![];
         departure_raw_array.iter().for_each(|x| {
-            departure_parsed_array.push(WienerLinienLineDeparture::assemble_from_json(&x));
+            departure_parsed_array.push(WienerLinienLineDeparture::assemble_from_json(x));
         });
 
         departure_parsed_array.sort_by(|a, b| a.countdown.cmp(&b.countdown));
@@ -174,12 +174,11 @@ impl WienerLinienLine {
 }
 
 #[derive(Clone, Debug, PartialEq, Eq)]
-#[allow(non_camel_case_types)]
 enum WienerLinienVehicleType {
-    ptTram,
-    ptMetro,
-    ptCityBus,
-    ptNightBus,
+    Tram,
+    Metro,
+    CityBus,
+    NightBus,
 }
 
 #[derive(Clone, Eq)]
@@ -202,10 +201,10 @@ impl Line {
         Self {
             name: input.name.to_owned(),
             vehicle_type: match input.vehicle_type.as_str() {
-                "ptTram" => WienerLinienVehicleType::ptTram,
-                "ptMetro" => WienerLinienVehicleType::ptMetro,
-                "ptBusCity" => WienerLinienVehicleType::ptCityBus,
-                "ptBusNight" => WienerLinienVehicleType::ptNightBus,
+                "ptTram" => WienerLinienVehicleType::Tram,
+                "ptMetro" => WienerLinienVehicleType::Metro,
+                "ptBusCity" => WienerLinienVehicleType::CityBus,
+                "ptBusNight" => WienerLinienVehicleType::NightBus,
                 _ => panic!("Unknown vehicle type!"),
             },
         }
@@ -263,7 +262,7 @@ async fn get_data_from_api(req: &WienerLinienAPIRequest) -> Result<String, reqwe
         return Err(res.err().unwrap());
     }
 
-    return Ok(res?.text().await?);
+    return res?.text().await;
 }
 
 async fn make_api_request(
@@ -339,7 +338,7 @@ async fn make_api_request(
         traffic_info = Some(
             response_trafficinfo
             .iter()
-            .map(|raw_trafficinfo| WienerLinienTrafficInfo::assemble_from_json(raw_trafficinfo))
+            .map(WienerLinienTrafficInfo::assemble_from_json)
             .collect() 
         );
     }
