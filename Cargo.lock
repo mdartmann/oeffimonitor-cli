@@ -653,6 +653,7 @@ dependencies = [
  "iso8601",
  "prettytable-rs",
  "reqwest",
+ "serde",
  "serde_json",
  "thiserror",
  "tokio",
