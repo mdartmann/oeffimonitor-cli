@@ -1,6 +1,22 @@
+use anyhow::{Context, Result};
+use comfy_table::{
+    modifiers::UTF8_ROUND_CORNERS, presets::UTF8_FULL, ContentArrangement, Row, Table,
+};
+use crossterm::{
+    cursor::{self, MoveTo},
+    execute, queue,
+    style::Print,
+    terminal::{self, size, ClearType},
+};
+use iso8601_timestamp::Timestamp;
 use serde::Deserialize;
 use serde_json::Value;
-use std::{thread::sleep, time::Duration, vec};
+use std::{
+    io::{stdout, Write},
+    thread::sleep,
+    time::Duration,
+    vec,
+};
 use thiserror::Error;
 
 const STATION_IDS: &[i32] = &[
@@ -66,15 +82,14 @@ struct WienerLinienMonitor {
 
 #[derive(Debug, Clone, Deserialize)]
 struct WienerLinienLocationStop {
-    #[serde(rename = "geometry")]
-    geometry: StopGeometry,
+    //    geometry: StopGeometry,
     #[serde(rename = "properties")]
     properties: StopProperties,
 }
-#[derive(Debug, Clone, Deserialize)]
-struct StopGeometry {
-    coordinates: [f32; 2],
-}
+//#[derive(Debug, Clone, Deserialize)]
+//struct StopGeometry {
+//coordinates: [f32; 2],
+//}
 
 #[derive(Debug, Clone, Deserialize)]
 struct StopProperties {
@@ -105,15 +120,15 @@ struct WienerLinienLineDeparture {
 #[derive(Debug, Clone, Deserialize)]
 struct WienerLinienLineDepartureTime {
     #[serde(rename = "timePlanned")]
-    time_planned: String,
+    time_planned: Timestamp,
     #[serde(rename = "timeReal")]
-    time_real: Option<String>,
+    time_real: Option<Timestamp>,
     countdown: i64,
 }
 
 #[derive(Clone, Deserialize)]
 struct WienerLinienTrafficInfo {
-    priority: String,
+    //    priority: String,
     title: String,
     description: String,
 }
@@ -134,8 +149,8 @@ struct Line {
 
 #[derive(Clone, Eq)]
 struct Departure {
-    time_planned: String,
-    time_real: Option<String>,
+    time_planned: Timestamp,
+    time_real: Option<Timestamp>,
     countdown: i64,
     station_name: String,
     destination_name: String,
@@ -160,15 +175,15 @@ impl Line {
 impl Departure {
     fn from_wiener_linien_api(
         t_line: &WienerLinienLine,
-        t_time_planned: &str,
-        t_time_real: &Option<String>,
+        t_time_planned: &Timestamp,
+        t_time_real: &Option<Timestamp>,
         t_countdown: &i64,
         t_station_name: &str,
     ) -> Self {
         Departure {
             line: Line::from_wiener_linien_line(t_line),
-            time_planned: t_time_planned.to_owned(),
-            time_real: t_time_real.clone(),
+            time_planned: *t_time_planned,
+            time_real: *t_time_real,
             countdown: *t_countdown,
             destination_name: t_line.destination.clone(),
             station_name: t_station_name.to_owned(),
@@ -284,34 +299,192 @@ async fn make_api_request(
     Ok((departures, traffic_info))
 }
 
-#[tokio::main]
-async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    loop {
-        let (departures, traffic_info) = make_api_request().await.unwrap();
-        if traffic_info.is_some() {
-            traffic_info.unwrap().iter().for_each(|info| {
-                println!(
-                    "TRAFFIC INFO! TITLE: {} DESCRIPTION:{} PRIORITY:{}",
-                    info.title, info.description, info.priority
-                );
-            })
-        }
+#[derive(Error, Debug)]
+enum DrawError {
+    #[error("TrafficInfo index out of bounds")]
+    IndexOutOfBoundsError,
+}
 
-        let mut iter = departures.iter();
-        for _ in 0..5 {
-            let odep = iter.next();
-            if odep.is_some() {
-                let dep = odep.unwrap();
-                println!(
-                    "Dep: in {} min  line {} type {:?} to {} from station {}",
-                    dep.countdown,
-                    dep.line.name,
-                    dep.line.vehicle_type,
-                    dep.destination_name,
-                    dep.station_name
-                );
+fn get_departure_board(
+    departures: &[Departure],
+    trafficinfo: &Option<Vec<WienerLinienTrafficInfo>>,
+    traffic_info_index: &Option<usize>,
+    width: &u16,
+    height: &u16,
+) -> Result<Table, DrawError> {
+    let mut table = Table::new();
+    table
+        .load_preset(UTF8_FULL)
+        .apply_modifier(UTF8_ROUND_CORNERS)
+        .set_width(*width)
+        .set_content_arrangement(ContentArrangement::DynamicFullWidth)
+        .set_header(vec!["Departure", "Line", "Closest station", "Destination"]);
+
+    let content_height = height - 5;
+
+    let mut depiter = departures.iter();
+    for _ in 0..(content_height / 3) {
+        let dep = match depiter.next() {
+            Some(d) => d,
+            None => break,
+        };
+        table.add_row(Row::from(vec![
+            format!(
+                "{:02}:{:02} (+{})",
+                if let Some(time) = dep.time_real {
+                    time.hour()
+                } else {
+                    dep.time_planned.hour()
+                },
+                if let Some(time) = dep.time_real {
+                    time.minute()
+                } else {
+                    dep.time_planned.minute()
+                },
+                dep.countdown
+            ),
+            dep.line.name.clone(),
+            dep.station_name.clone(),
+            dep.destination_name.clone(),
+        ]));
+    }
+    // if there is empty space left, add empty rows to fill up the screen
+    if departures.len() < (height - 5).into() {
+        let number_of_blanks = departures.len() - ((height - 5) as usize);
+        for _ in 0..number_of_blanks {
+            table.add_row(Row::new());
+        }
+    }
+
+    // add footer
+    let date = chrono::Local::now();
+    if let Some(index) = traffic_info_index {
+        let infovec = match trafficinfo {
+            Some(i) => i,
+            None => return Err(DrawError::IndexOutOfBoundsError),
+        };
+        let info = match infovec.get(*index) {
+            Some(i) => i,
+            None => return Err(DrawError::IndexOutOfBoundsError),
+        };
+        table.add_row(Row::from(vec![
+            format!("{}", date.format("%H:%M:%S")),
+            format!("{}/{}", index + 1, infovec.len()),
+            info.title.to_string(),
+            info.description.to_string(),
+        ]));
+    } else {
+        table.add_row(Row::from(vec![format!("{}", date.format("%H:%M:%S"))]));
+    }
+    Ok(table)
+}
+
+/// Buffer of two tables, the previous and the current one
+/// Used so only the differences need to be redrawn (to avoid flickering)
+struct Buffer {
+    width: u16,
+    height: u16,
+    content: String,
+}
+
+impl Buffer {
+    fn new(width: u16, height: u16, content: String) -> Buffer {
+        return Buffer {
+            width,
+            height,
+            content,
+        };
+    }
+    /// Get difference between cur and prev tables
+    /// Arguments:
+    fn get_diff(&self, other: &Buffer) -> Vec<(u16, u16, char)> {
+        let mut updates: Vec<(u16, u16, char)> = vec![];
+
+        for (i, (current, previous)) in self.content.chars().zip(other.content.chars()).enumerate()
+        {
+            if current != previous {
+                let x = i as u16 % self.width;
+                let y = i as u16 / self.width;
+                updates.push((x, y, current))
             }
         }
-        sleep(Duration::from_secs(10));
+        updates
+    }
+
+    fn has_resized(&self, other: &Buffer) -> bool {
+        self.width != other.width || self.height != other.height
+    }
+}
+
+fn reset() -> Result<(), std::io::Error> {
+    execute!(
+        stdout(),
+        terminal::Clear(ClearType::All),
+        cursor::MoveTo(0, 0),
+        cursor::Hide
+    )
+}
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let mut stdout = stdout();
+
+    loop {
+        let (departures, traffic_info) = make_api_request()
+            .await
+            .context("Failed to make API request!")?;
+
+        let mut prev_buf = Buffer::new(0, 0, "".to_string());
+
+        for i in 1..11 {
+            let (mut width, mut height) = size().context("Could not determine terminal size!")?;
+            // For some reason, the above size params are 1-indexed. Drop them back down to 0.
+            width -= 1;
+            height -= 1;
+
+            let traffic_info_index = if let Some(traffic) = &traffic_info {
+                Some(i % traffic.len())
+            } else {
+                None
+            };
+
+            let board = get_departure_board(
+                &departures,
+                &traffic_info,
+                &None,
+//                &traffic_info_index,
+                &width,
+                &height,
+            )
+            .context("Failed to create departure board!")?;
+
+            let cur_buf = Buffer::new(
+                width,
+                height,
+                format!("{}", board),
+            );
+            // it the window got resized, do not try to draw the differences, but redraw everything
+            if cur_buf.has_resized(&prev_buf) {
+                reset().context("Failed to reset terminal after resize")?;
+                queue!(stdout, Print(&cur_buf.content)).context("Failed to queue redraw")?;
+            } else {
+                // get differences between previous and current tables
+                let diff = cur_buf.get_diff(&prev_buf);
+                // queue the differences
+                for (x, y, char) in diff {
+                    queue!(stdout, MoveTo(x, y)).context("Failed to queue move")?;
+                    queue!(stdout, Print(char)).context("Failed to queue print")?;
+                }
+                // for debugging: print both!
+                //                queue!(stdout, Print(&cur_buf.content)).context("bla")?;
+                //               queue!(stdout, Print(&prev_buf.content)).context("bla")?;
+            }
+            stdout.flush().context("Failed to write table to stdout")?;
+            // reset cursor to (0,0) just in case
+            execute!(stdout, MoveTo(0, 0)).context("Failed to reset cursor")?;
+
+            prev_buf = cur_buf;
+            sleep(Duration::from_secs(1));
+        }
     }
 }
